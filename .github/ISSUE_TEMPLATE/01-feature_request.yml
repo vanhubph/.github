@@ -1,0 +1,79 @@
+name: "🧾 Feature Request"
+description: "Propose a new feature or enhancement."
+title: "[feat]: "
+labels: []
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: "Please provide enough context so anyone can pick this up."
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: One or two sentences describing the request.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Motivation
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution (high level)
+
+  - type: checkboxes
+    id: areas
+    attributes:
+      label: Area(s) involved
+      options:
+        - label: Frontend
+        - label: Backend
+        - label: Database
+        - label: API contract
+        - label: DevOps
+        - label: Docs
+        - label: Design
+
+  - type: checkboxes
+    id: flags
+    attributes:
+      label: Flags
+      options:
+        - label: Breaking change
+        - label: Requires DB migration
+        - label: Security/Privacy impact
+        - label: Docs update required
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Bullet points with observable outcomes.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact / Risks / Rollback
+
+  - type: textarea
+    id: deps
+    attributes:
+      label: Dependencies / Related issues
+      description: "Link issues or PRs, e.g., #123, org/repo#456."
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context (links, screenshots)

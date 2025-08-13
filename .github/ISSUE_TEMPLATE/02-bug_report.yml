@@ -1,0 +1,98 @@
+name: "🐛 Bug Report"
+description: "Report a defect with steps to reproduce."
+title: "[bug]: "
+labels: []
+assignees: []
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: "What's broken in plain language?"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: area
+    attributes:
+      label: Area
+      description: Helps with triage (optional).
+      options:
+        - label: Frontend (web)
+        - label: Backend (API)
+        - label: Database
+        - label: DevOps / CI
+        - label: Docs
+        - label: Other
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1) …
+        2) …
+        3) …
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: "Include any error text exactly as shown, if applicable."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Reproducibility
+      options:
+        - Always
+        - Often
+        - Sometimes
+        - Rarely
+        - Could not reproduce
+      default: 0
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: |
+        Web: Browser + version, OS, screen size if relevant
+        API: Endpoint, request body, auth type, commit/branch
+        DB: Migration version / schema hash
+        DevOps: Workflow name + run URL
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Console output
+      description: "Redact secrets; share the smallest snippet that shows the failure."
+
+  - type: checkboxes
+    id: regression
+    attributes:
+      label: Regression?
+      options:
+        - label: Started after a recent update
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Known workaround
+      description: "If you've found a temporary fix, note it here."
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context (links, screenshots)
